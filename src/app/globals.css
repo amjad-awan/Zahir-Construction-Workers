@@ -1,0 +1,56 @@
+@import "tailwindcss";
+:root {
+  --bg: #f8f7f3;
+  --bg-alt: #eae5dc;
+  --dark: #202522;
+  --dark-2: #454c47;
+  --accent: #b49a78;
+  --text: #202522;
+  --text-2: #77766f;
+  --white: #ffffff;
+  --font-serif: "DM Serif Display", "Playfair Display", Georgia, serif;
+  --font-sans: "Manrope", "Inter", system-ui, sans-serif;
+}
+@theme inline {
+  --color-stone: var(--bg);
+  --color-sand: var(--bg-alt);
+  --color-ink: var(--dark);
+  --color-ink2: var(--dark-2);
+  --color-bronze: var(--accent);
+  --color-body: var(--text);
+  --color-muted: var(--text-2);
+  --color-white: var(--white);
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+::selection {
+  background: var(--accent);
+  color: var(--dark);
+}
